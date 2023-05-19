@@ -1,0 +1,4 @@
+core-module.wasm
+component.wasm
+dist
+__pycache__
