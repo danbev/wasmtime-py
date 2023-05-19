@@ -1,0 +1,6 @@
+demo-adapted.wasm
+demo-component.wasm
+demo-embed.wasm
+demo.wasm
+dist
+__pycache__

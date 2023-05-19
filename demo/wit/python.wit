@@ -1,0 +1,6 @@
+default world demo {
+  import python: interface {
+    print: func(s: string)
+  }
+  export run: func()
+}
