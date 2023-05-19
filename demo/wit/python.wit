@@ -1,0 +1,52 @@
+default world demo {
+  import python: interface {
+    print: func(s: string)
+  }
+  export run: func()
+  export wit: self.wit
+}
+
+interface wit {
+  use self.wit-types.{inner-pattern}
+
+// Having the same types declared in the interface works.
+// Commenting in the following lines, and commenting out the 'use' instruction
+// above (to avoid duplicated types) works.
+/*
+  variant inner-pattern {
+    anything, 
+    object(object-pattern),
+    nothing,
+  }
+
+  record field {
+    name: string,
+    optional: bool,
+  } 
+  
+  record object-pattern {
+    fields: list<field>,
+  }
+*/
+}
+
+interface wit-types {
+
+  variant inner-pattern {
+    anything, 
+    // If the following variant is commented out there is no error so it seems
+    // to be the cause of the issue.
+    object(object-pattern),
+    nothing,
+  }
+
+  record field {
+    name: string,
+    optional: bool,
+  } 
+  
+  record object-pattern {
+    fields: list<field>,
+  }
+
+}
