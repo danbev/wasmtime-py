@@ -17,12 +17,12 @@ print-component: component.wasm
 
 # Generates the Python bindings for the component.
 bindings: component.wasm
-	python3 -m wasmtime.bindgen $< --out-dir dist
+	python3 ../wasmtime/bindgen $< --out-dir dist
 
 run: 
 	@python3 demo.py
 
 .PHONY clean:
 clean:
-	@${RM} component.wasm core-module.wasm
+	@${RM} -rf component.wasm core-module.wasm dist
 

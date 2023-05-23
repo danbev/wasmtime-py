@@ -7,7 +7,7 @@ class Host(imports.Python):
 
 def main():
     store = Store()
-    demo = Component(store, ComponentImports(Host()))
+    demo = Component(store, ComponentImports(Host(), Host()))
     demo.run(store)
 
 if __name__ == '__main__':
