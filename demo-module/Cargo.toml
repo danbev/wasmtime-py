@@ -1,0 +1,10 @@
+[package]
+name = "demo-module"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wit-bindgen = "0.6.0"
+
+[lib]                                                                           
+crate-type = ["cdylib"]

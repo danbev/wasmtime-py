@@ -1,0 +1,11 @@
+default interface demo-types {
+
+  variant runtime-value {                                                          
+    %string(string),                                                               
+  }
+
+  record result-type {
+    value: runtime-value
+  }
+
+}

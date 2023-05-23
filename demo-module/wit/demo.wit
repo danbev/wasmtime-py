@@ -1,0 +1,9 @@
+default world demo {
+  export wit: self.wit
+}
+
+interface wit {
+  use pkg.demo-types.{result-type}
+
+  something: func() -> result-type
+}
