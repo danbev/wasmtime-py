@@ -20,3 +20,12 @@ Traceback (most recent call last):
 NameError: name 'RuntimeValueString' is not defined
 make: *** [Makefile:16: run] Error 1
 ```
+If we look line 27 se have the following code:
+```python
+    variant = RuntimeValueString(list) 
+```
+Notice that there is no module/namespace before `RuntimeValueString`. If we add
+the namespace/module `demo_types` this will work:
+```python
+    variant = demo_types.RuntimeValueString(list) 
+```
